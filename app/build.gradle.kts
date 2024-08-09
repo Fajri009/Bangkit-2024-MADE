@@ -64,8 +64,8 @@ dependencies {
     implementation(libs.logging.interceptor)
 
     // Mockito
-    testImplementation("org.mockito:mockito-core:4.4.0")
-    testImplementation("org.mockito:mockito-inline:4.4.0")
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
 
     // Room
     implementation(libs.androidx.room.runtime)

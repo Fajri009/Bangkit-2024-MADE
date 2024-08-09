@@ -5,16 +5,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.bangkit_2024_made.CleanArchitecture.StarterProject.core.data.source.local.entity.TourismEntity
+import com.example.bangkit_2024_made.CleanArchitecture.StarterProject.core.domain.model.Tourism
 import com.example.bangkit_2024_made.R
 import com.example.bangkit_2024_made.databinding.ItemListTourismBinding
 
 class TourismAdapter : RecyclerView.Adapter<TourismAdapter.ListViewHolder>() {
 
-    private var listData = ArrayList<TourismEntity>()
-    var onItemClick: ((TourismEntity) -> Unit)? = null
+    private var listData = ArrayList<Tourism>()
+    var onItemClick: ((Tourism) -> Unit)? = null
 
-    fun setData(newListData: List<TourismEntity>?) {
+    fun setData(newListData: List<Tourism>?) {
         if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
@@ -33,7 +33,7 @@ class TourismAdapter : RecyclerView.Adapter<TourismAdapter.ListViewHolder>() {
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemListTourismBinding.bind(itemView)
-        fun bind(data: TourismEntity) {
+        fun bind(data: Tourism) {
             with(binding) {
                 Glide.with(itemView.context)
                     .load(data.image)

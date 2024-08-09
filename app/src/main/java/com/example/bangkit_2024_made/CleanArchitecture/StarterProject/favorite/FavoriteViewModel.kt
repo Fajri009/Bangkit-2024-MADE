@@ -1,8 +1,8 @@
 package com.example.bangkit_2024_made.CleanArchitecture.StarterProject.favorite
 
 import androidx.lifecycle.ViewModel
-import com.example.bangkit_2024_made.CleanArchitecture.StarterProject.core.data.TourismRepository
+import com.example.bangkit_2024_made.CleanArchitecture.StarterProject.core.domain.usecase.TourismUseCase
 
-class FavoriteViewModel(tourismRepository: TourismRepository) : ViewModel() {
-    val favoriteTourism = tourismRepository.getFavoriteTourism()
+class FavoriteViewModel(tourismUseCase: TourismUseCase) : ViewModel() {
+    val favoriteTourism = tourismUseCase.getFavoriteTourism()
 }

@@ -1,14 +1,11 @@
 package com.example.bangkit_2024_made.CleanArchitecture.StarterProject.detail
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.bangkit_2024_made.CleanArchitecture.StarterProject.core.data.source.local.entity.TourismEntity
+import com.example.bangkit_2024_made.CleanArchitecture.StarterProject.core.domain.model.Tourism
 import com.example.bangkit_2024_made.CleanArchitecture.StarterProject.core.ui.ViewModelFactory
 import com.example.bangkit_2024_made.R
 import com.example.bangkit_2024_made.databinding.ActivityDetailTourismBinding
@@ -32,11 +29,11 @@ class DetailTourismActivity : AppCompatActivity() {
         val factory = ViewModelFactory.getInstance(this)
         detailTourismViewModel = ViewModelProvider(this, factory)[DetailTourismViewModel::class.java]
 
-        val detailTourism = intent.getParcelableExtra<TourismEntity>(EXTRA_DATA)
+        val detailTourism = intent.getParcelableExtra<Tourism>(EXTRA_DATA)
         showDetailTourism(detailTourism)
     }
 
-    private fun showDetailTourism(detailTourism: TourismEntity?) {
+    private fun showDetailTourism(detailTourism: Tourism?) {
         detailTourism?.let {
             supportActionBar?.title = detailTourism.name
             binding.content.tvDetailDescription.text = detailTourism.description
