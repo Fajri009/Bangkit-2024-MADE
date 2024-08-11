@@ -15,10 +15,7 @@
         android:theme="@style/Theme.TourismApp"
         tools:targetApi="31">
         <activity
-            android:name=".CleanArchitecture.StarterProject.detail.DetailTourismActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CleanArchitecture.StarterProject.MainStarterProjectAplikasiCleanArchitecture"
+            android:name=".ReactiveProgramming.ReactiveX.MainActivityReactiveX"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CleanArchitecture.StarterProject.detail.DetailTourismActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CleanArchitecture.StarterProject.MainStarterProjectAplikasiCleanArchitecture"
+            android:exported="false" />
         <activity
             android:name=".CleanArchitecture.Latihan.presentation.MainLatihanCleanArchitecture"
             android:exported="false" />
