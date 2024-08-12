@@ -21,6 +21,8 @@ roomVersion = "2.6.1"
 roomCompiler = "2.5.2"
 ksp = "1.9.0-1.0.11"
 mockito = "4.4.0"
+rxJava = "2.2.19"
+rxBinding = "2.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,6 +46,8 @@ androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomVers
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
 mockito-core = { module = "org.mockito:mockito-core",  version.ref = "mockito" }
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
+reactiveX-rxjava2 = { module = "io.reactivex.rxjava2:rxjava", version.ref = "rxJava" }
+rxbinding = { module = "com.jakewharton.rxbinding2:rxbinding", version.ref = "rxBinding" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

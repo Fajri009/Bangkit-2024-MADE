@@ -71,4 +71,8 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
+
+    // Reactive Programming
+    implementation(libs.reactiveX.rxjava2)
+    implementation(libs.rxbinding)
 }
