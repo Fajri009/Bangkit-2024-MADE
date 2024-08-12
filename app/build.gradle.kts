@@ -41,7 +41,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -50,6 +49,7 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.reactivestreams.ktx)
     implementation(libs.androidx.fragment.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -60,6 +60,7 @@ dependencies {
 
     // Retrofit
     implementation(libs.retrofit)
+    implementation(libs.retrofit.rxjava2)
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
 
@@ -70,9 +71,11 @@ dependencies {
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.rxjava2)
     ksp(libs.androidx.room.compiler)
 
     // Reactive Programming
     implementation(libs.reactiveX.rxjava2)
+    implementation(libs.reactiveX.rxjava2.rxAndroid)
     implementation(libs.rxbinding)
 }
