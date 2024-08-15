@@ -74,8 +74,12 @@ dependencies {
     implementation(libs.androidx.room.rxjava2)
     ksp(libs.androidx.room.compiler)
 
-    // Reactive Programming
+    // RxJava
     implementation(libs.reactiveX.rxjava2)
     implementation(libs.reactiveX.rxjava2.rxAndroid)
     implementation(libs.rxbinding)
+
+    // Coroutine
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 }
