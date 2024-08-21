@@ -1,8 +1,8 @@
-package com.example.bangkit_2024_made.TourismAppProject.Starter.core.utils
+package com.example.bangkit_2024_made.TourismAppProject.CoroutineFlow.core.utils
 
 import android.content.Context
 import com.example.bangkit_2024_made.R
-import com.example.bangkit_2024_made.TourismAppProject.Starter.core.data.source.remote.response.TourismResponse
+import com.example.bangkit_2024_made.TourismAppProject.CoroutineFlow.core.data.source.remote.response.TourismResponse
 import org.json.JSONObject
 import java.io.IOException
 
