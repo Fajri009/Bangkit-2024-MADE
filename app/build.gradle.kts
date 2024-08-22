@@ -84,4 +84,9 @@ dependencies {
     // Coroutine
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
+
+    // Koin
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    androidTestImplementation(libs.koin.test)
 }

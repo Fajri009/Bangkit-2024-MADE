@@ -2,24 +2,21 @@ package com.example.bangkit_2024_made.DependencyInjection
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.bangkit_2024_made.R
 import com.example.bangkit_2024_made.databinding.ActivityMainLatihanKoinBinding
+import org.koin.android.ext.android.inject
 
 class MainActivityLatihanKoin : AppCompatActivity() {
     lateinit var binding: ActivityMainLatihanKoinBinding
-    lateinit var userRepository: UserRepository
+    private val userRepository: UserRepository by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainLatihanKoinBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val sesi = SessionManager(this)
-        userRepository = UserRepository.getInstance(sesi)
+//        val sesi = SessionManager(this)
+//        userRepository = UserRepository.getInstance(sesi)
 
         if (userRepository.isUserLogin()) {
             moveToHomeActivity()
